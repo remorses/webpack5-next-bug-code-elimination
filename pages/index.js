@@ -1,5 +1,3 @@
-import http from '_http_common'
-
 export default function Home({}) {
     return (
         <div>
@@ -8,8 +6,8 @@ export default function Home({}) {
     )
 }
 
-export function getStaticProps() {
-    console.log(http)
+export async function getStaticProps() {
+    await import('_http_common').then((http) => console.log(http))
     return {
         props: {},
     }
