@@ -1,4 +1,4 @@
-import { serverOnlyObject } from 'package'
+import http from '_http_common'
 
 export default function Home({}) {
     return (
@@ -9,7 +9,7 @@ export default function Home({}) {
 }
 
 export function getStaticProps() {
-    console.log(serverOnlyObject)
+    console.log(http)
     return {
         props: {},
     }
